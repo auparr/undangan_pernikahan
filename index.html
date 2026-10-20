@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Undangan Pernikahan – Ruqayyah &amp; Roni</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+Javanese:wght@400;700&display=swap"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <audio id="gamelan" src="audio/gamelan.mp3" loop preload="auto"></audio>
+
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="gunungan-half" viewBox="0 0 90 300">
+        <path
+          d="M0 2 C8 40 50 70 62 130 C70 170 88 200 88 245 L88 298 L0 298 Z"
+          fill="#5C3D2E"
+          stroke="#C9A24B"
+          stroke-width="2"
+        ></path>
+
+        <path
+          d="M0 40 C6 70 38 95 48 140 C55 175 72 200 72 245 L72 284 L0 284"
+          fill="none"
+          stroke="#C9A24B"
+          stroke-width="1"
+          opacity=".7"
+        ></path>
+
+        <circle cx="30" cy="120" r="5" fill="none" stroke="#C9A24B"></circle>
+        <circle cx="42" cy="170" r="6" fill="none" stroke="#C9A24B"></circle>
+        <circle cx="48" cy="225" r="7" fill="none" stroke="#C9A24B"></circle>
+      </symbol>
+    </svg>
+
+    <!-- cover -->
+    <section id="cover" aria-label="Sampul undangan">
+      <div class="paruh paruh-kiri">
+        <svg class="gunungan">
+          <use href="#gunungan-half"></use>
+        </svg>
+      </div>
+
+      <div class="paruh paruh-kanan">
+        <svg class="gunungan">
+          <use href="#gunungan-half"></use>
+        </svg>
+      </div>
+
+      <div class="cover-teks">
+        <p class="aksara">ꦱꦸꦒꦼꦁꦫꦮꦸꦃ</p>
+        <p class="kecil">Pernikahan</p>
+
+        <h1 class="nama-cover">Ruqayyah<span>&amp;</span>Roni</h1>
+
+        <p class="kecil">Sabtu, 19 Desember 2026</p>
+
+        <p class="tamu">
+          Kepada Yth.<br />
+          <strong id="nama-tamu">Bapak/Ibu/Saudara/i</strong>
+        </p>
+
+        <button id="btn-buka" class="btn btn-emas">Buka Undangan</button>
+      </div>
+    </section>
+
+    <button
+      id="btn-musik"
+      class="btn-musik"
+      aria-label="Putar atau hentikan musik"
+      hidden
+    >
+      ♪
+    </button>
+
+    <!-- cerita -->
+    <main id="cerita">
+      <div id="panggung">
+        <div class="babak">
+          <p class="salam">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+          <p class="aksara">ꦱꦸꦒꦼꦁꦫꦮꦸꦃ</p>
+
+          <p class="teks-baca">
+            Dan di antara tanda-tanda kebesaran-Nya, Dia menciptakan pasangan
+            untukmu agar kamu merasa tenteram kepadanya, dan Dia menjadikan di
+            antaramu rasa kasih dan sayang. (QS. Ar-Rum: 21)
+          </p>
+        </div>
+
+        <div class="babak">
+          <h3>Babak I</h3>
+          <p class="nama-babak">Pertemuan</p>
+
+          <p class="teks-baca">
+            Di sudut perpustakaan kampus, tahun 2019, sebuah pulpen yang
+            kehabisan tinta mempertemukan dua orang asing.
+          </p>
+        </div>
+
+        <div class="babak">
+          <div class="chat">
+            <div class="gelembung">
+              <p
+                class="ketik"
+                data-teks="Maaf ya, pulpennya belum kukembalikan. Boleh kutraktir es teh sebagai gantinya?"
+              ></p>
+            </div>
+
+            <div class="chat-kirim">Kirim</div>
+          </div>
+        </div>
+
+        <div class="babak">
+          <h3>Babak II</h3>
+          <p class="nama-babak">Lamaran</p>
+
+          <p class="teks-baca">
+            Tujuh tahun saling mendoakan, hingga Roni datang bersama keluarga.
+            Ruqayyah menjawab dengan satu kata: bismillah.
+          </p>
+        </div>
+
+        <div class="babak">
+          <h3>Babak III</h3>
+          <p class="nama-babak">Menuju Hari Bahagia</p>
+
+          <p class="teks-baca">
+            Dengan restu kedua orang tua, kami melangkah menuju hari yang telah
+            lama kami nantikan.
+          </p>
+        </div>
+
+        <div class="babak">
+          <p class="nama-babak">
+            Maka dengan memohon restu, kami mengundang Anda.
+          </p>
+        </div>
+      </div>
+
+      <button id="btn-lewati" class="btn-lewati" hidden>Lewati cerita</button>
+    </main>
+
+    <div id="petals" aria-hidden="true"></div>
+
+    <!-- kartu mempelai -->
+    <section id="kartu" class="layar" hidden>
+      <div class="kartu-isi">
+        <p class="aksara">ꦱꦸꦒꦼꦁꦫꦮꦸꦃ</p>
+
+        <div class="row g-3 text-center">
+          <div class="col-6">
+            <div class="foto-bingkai">
+              <img src="img/ruqayyah.jpeg" alt="Potret Ruqayyah Aulia Rahman" />
+            </div>
+
+            <h3>Ruqayyah Aulia Rahman</h3>
+
+            <p class="kecil">
+              Putri dari Bpk. Abdullah Rahman &amp; Ibu Siti Aminah
+            </p>
+          </div>
+
+          <div class="col-6">
+            <div class="foto-bingkai">
+              <img src="img/roni.jpeg" alt="Potret Roni Pratama Wijaya" />
+            </div>
+
+            <h3>Roni Pratama Wijaya</h3>
+
+            <p class="kecil">
+              Putra dari Bpk. Hendra Wijaya &amp; Ibu Sri Rahayu
+            </p>
+          </div>
+        </div>
+
+        <button id="btn-lihat" class="btn btn-emas mt-3">Lihat Undangan</button>
+      </div>
+    </section>
+
+    <!-- menu utama -->
+    <section id="menu" class="layar" hidden>
+      <h2 class="judul-menu">Undangan untuk Anda</h2>
+
+      <div class="ikon-daftar">
+        <button class="ikon" data-bs-toggle="modal" data-bs-target="#m-acara">
+          Acara
+        </button>
+
+        <button class="ikon" data-bs-toggle="modal" data-bs-target="#m-lokasi">
+          Lokasi
+        </button>
+
+        <button class="ikon" data-bs-toggle="modal" data-bs-target="#m-amplop">
+          Amplop
+        </button>
+
+        <button class="ikon" data-bs-toggle="modal" data-bs-target="#m-rsvp">
+          RSVP
+        </button>
+
+        <button class="ikon" data-bs-toggle="modal" data-bs-target="#m-galeri">
+          Galeri
+        </button>
+      </div>
+
+      <p class="kecil mt-4 teks-baca">
+        Barakallahu lakuma wa baraka 'alaikuma wa jama'a bainakuma fii khair.
+      </p>
+
+      <p class="kecil">
+        Wassalamu'alaikum Warahmatullahi Wabarakatuh<br />
+        Matur nuwun
+      </p>
+    </section>
+
+    <!-- modal acara -->
+    <div class="modal fade" id="m-acara" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Rangkaian Acara</h3>
+
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div
+              id="countdown"
+              class="countdown"
+              data-tanggal="2026-12-19T08:00:00+07:00"
+            ></div>
+
+            <ol class="timeline">
+              <li>
+                <strong>Siraman</strong>
+                <span>
+                  Jumat, 18 Desember 2026, 15.00 WIB<br />
+                  Kediaman mempelai wanita (khusus keluarga)
+                </span>
+              </li>
+
+              <li>
+                <strong>Akad Nikah</strong>
+                <span>
+                  Sabtu, 19 Desember 2026, 08.00 WIB<br />
+                  Gedung Serbaguna Kenanga
+                </span>
+              </li>
+
+              <li>
+                <strong>Panggih</strong>
+                <span>
+                  Sabtu, 19 Desember 2026, 10.00 WIB<br />
+                  Gedung Serbaguna Kenanga
+                </span>
+              </li>
+
+              <li>
+                <strong>Resepsi</strong>
+                <span>
+                  Sabtu, 19 Desember 2026, 11.00 – 14.00 WIB<br />
+                  Gedung Serbaguna Kenanga
+                </span>
+              </li>
+            </ol>
+
+            <p class="kecil">
+              Dress code: batik atau kebaya, warna cokelat, krem, atau emas
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal lokasi -->
+    <div class="modal fade" id="m-lokasi" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Lokasi</h3>
+
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+
+          <div class="modal-body text-center">
+            <p>
+              Pendopo Agung Royal Ambarrukmo<br />
+              <span class="kecil">
+                Jl. Laksda Adisucipto No. 81, Caturtunggal, Sleman, Yogyakarta
+              </span>
+            </p>
+
+            <iframe
+              class="peta"
+              title="Peta lokasi acara"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Pendopo+Agung+Royal+Ambarrukmo+Yogyakarta&output=embed"
+            ></iframe>
+
+            <a
+              class="btn btn-emas mt-3"
+              href="https://www.google.com/maps/search/?api=1&query=Pendopo+Agung+Royal+Ambarrukmo+Yogyakarta"
+              target="_blank"
+              rel="noopener"
+            >
+              Buka di Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal amplop -->
+    <div class="modal fade" id="m-amplop" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Amplop Digital</h3>
+
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+
+          <div class="modal-body text-center">
+            <p class="kecil">
+              Doa restu Anda sudah sangat berarti. Bila ingin memberi tanda
+              kasih:
+            </p>
+
+            <p>
+              <strong>Bank Contoh – 1234567890</strong><br />
+              <span class="kecil">a.n. Ruqayyah Aulia Rahman</span>
+            </p>
+
+            <button class="btn btn-emas" data-salin="1234567890">
+              Salin nomor
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal RSVP -->
+    <div class="modal fade" id="m-rsvp" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">RSVP &amp; Ucapan</h3>
+
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <form id="form-rsvp" novalidate>
+              <label class="form-label" for="rsvp-nama">Nama</label>
+              <input
+                id="rsvp-nama"
+                class="form-control mb-3"
+                maxlength="60"
+                required
+              />
+
+              <label class="form-label" for="rsvp-hadir">Kehadiran</label>
+              <select id="rsvp-hadir" class="form-select mb-3">
+                <option value="Hadir">Insya Allah hadir</option>
+                <option value="Tidak hadir">
+                  Mohon maaf, tidak bisa hadir
+                </option>
+              </select>
+
+              <label class="form-label" for="rsvp-jumlah">Jumlah tamu</label>
+              <input
+                id="rsvp-jumlah"
+                type="number"
+                class="form-control mb-3"
+                value="1"
+                min="1"
+                max="10"
+              />
+
+              <label class="form-label" for="rsvp-ucapan"
+                >Ucapan &amp; doa</label
+              >
+              <textarea
+                id="rsvp-ucapan"
+                class="form-control mb-3"
+                rows="3"
+                maxlength="300"
+              ></textarea>
+
+              <button type="submit" class="btn btn-emas w-100">Kirim</button>
+
+              <p
+                id="rsvp-pesan"
+                class="kecil text-center mt-2"
+                role="status"
+              ></p>
+            </form>
+
+            <hr />
+
+            <h4 class="h5">Ucapan</h4>
+            <ul id="daftar-ucapan" class="daftar-ucapan"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal galeri -->
+    <div class="modal fade" id="m-galeri" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Galeri</h3>
+
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="galeri-besar">
+              <img id="galeri-besar" alt="" />
+            </div>
+
+            <div class="galeri-kontrol">
+              <button id="g-prev" class="btn btn-emas">Sebelumnya</button>
+              <span id="g-info" class="kecil" role="status"></span>
+              <button id="g-next" class="btn btn-emas">Berikutnya</button>
+            </div>
+
+            <div id="galeri-thumb" class="row row-cols-3 g-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+    <script src="js/cerita.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/rsvp.js"></script>
+    <script src="js/galeri.js"></script>
+  </body>
+</html>
